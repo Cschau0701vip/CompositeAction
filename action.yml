@@ -1,5 +1,8 @@
 name: "Publish to Docker Registry"
 description: "Build a container image and push it to the Docker registry"
+branding:
+  icon: image
+  color: orange
 
 inputs: 
   registry_username:

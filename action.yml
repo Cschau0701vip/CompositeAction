@@ -41,7 +41,7 @@ runs:
           fi
           
       - name: Build and Push the image into Registry
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v4
         with:
           context: .
           push: true

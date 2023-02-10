@@ -39,4 +39,12 @@ runs:
           else
             echo "final_tag=${{inputs.tag}}" >> $GITHUB_ENV
           fi
+          
+      - name: Build and Push the image into Registry
+        uses: docker/build-push-action@v1
+        with:
+          context: .
+          push: true
+          tags: ${{inputs.registry_username}}/${{inputs.registry_password}}/${{env.final_tag}}
+
 

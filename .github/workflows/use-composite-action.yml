@@ -37,7 +37,7 @@ jobs:
           
       - name: Publish to Docker Registry
         # You may pin to the exact commit or the version.
-        uses: Cschau0701vip/CompositeAction@9f3d336ac86f794ee53e629fe624bc8c8f3beafb
+        uses: ./ # Cschau0701vip/CompositeAction@9f3d336ac86f794ee53e629fe624bc8c8f3beafb
         #uses: Cschau0701vip/CompositeAction@docker-image
         with:
           # Username of the Docker registry

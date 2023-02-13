@@ -33,11 +33,11 @@ runs:
       - name: Set the image Tag
         shell: bash
         run: |
-          if [ -z "${{inputs.tag}}" ]
+          if [ -z "${{inputs.image_tag}}" ]
           then
             echo "final_tag=latest" >> $GITHUB_ENV
           else
-            echo "final_tag=${{inputs.tag}}" >> $GITHUB_ENV
+            echo "final_tag=${{inputs.image_tag}}" >> $GITHUB_ENV
           fi
           
       - name: Build and Push the image into Registry

@@ -29,6 +29,12 @@ jobs:
           registry_password: ${{secrets.REGISTRY_PASSWORD}}
           image_name: ${{vars.IMAGE_NAME}}
           image_tag: $GITHUB_RUN_NUMBER
+          
+      - name: Check timestamp
+        run: |
+          echo "1 - {{ github.event.created_at }}"
+          echo "2 - ${{ github.event.created_at }}"
+          echo "3 - ${{ env.GITHUB_EVENT_CREATED_AT }}"
       
       #- name: Publish to Docker Registry
         # You may pin to the exact commit or the version.
